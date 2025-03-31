@@ -1,0 +1,139 @@
+header { /* adjust header */
+
+
+}
+
+body { 
+    background: none; /* images were being moved as a background image so i put this in to prevent that issue. */
+
+     /* edit to exact color of wordpress */
+    /* from wordpress, find font-family, font-size - margins - text-align, color - */
+    /* adjust images, lists, margins, overall organization */
+
+}
+
+body.one{
+    background-color: lightgrey; /* changed the background color for my first page */
+}
+
+.title{
+    text-align: center; /* centered title in the header */
+}
+
+ul.nav{
+    list-style-type: none; /* got rid of bullet points on the navigation menu */
+    text-align: center; /* centered the navigation menu */
+    margin: 0; 
+    padding: 0;
+    overflow: hidden;    
+}
+
+li.nav1{ /* this made the navigation menu horizontal and changed the space between tabs */
+    display: inline; 
+    padding: 15px 15px
+}
+
+.logotop {   /* this altered the logo in the header section */
+    height: 85px;
+    width: 85px;   
+    position: relative;
+    right: 5% 
+}
+div.about{ /* aligned the about page title and paragraph in the center, adjusted the position, and the picutre along with it. */
+    text-align: center;
+    width: 600px;
+    position: relative;
+    left: 30%;
+    padding-top: 15px
+}
+
+body.two{
+    background-color:white; /* changed the background color on page 2 to match my Wordpress website. */
+}
+
+div.meetplayers{ /* this altered the opening paragraph and title of the second page. */
+    text-align: center;
+    width: 600px;
+    position: relative;
+    left: 30%;
+    padding-top: 15px
+}
+
+div.toprow{ /* this created a container around the top three lists allowing them to be in the same line */
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin: 50px;
+}
+
+ul.g{ /* allowed the first list to be in the top line aligned to the left, while also changing the font size. */
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+}
+
+ul.a{ /* allowed the second list to be in the top line aligned to the center of the page, while also changing the font size. */
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+}
+
+ul.c{ /* allowed the third list to be in the top line aligned to the right, while also changing the font size. */
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+}
+
+div.bottomrow{ /* this created a container around the last three lists of players, allowing them to be in the same line with the same gaps and margins around them */
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin: 50px;
+}
+
+ul.d{ /* allowed the fourth list to be in the bottom line aligned to the left, while also changing the font size. */
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+}
+
+ul.j{ /* allowed the fifth list to be in the bottom line aligned in the center, while also changing the font size. */
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+}
+ 
+ul.n{ /* allowed the sixth list to be in the bottom line aligned to the right, while also changing the font size. */
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+}
+
+
+
+.sellers { /* adjust size and location */
+    
+}
+
+.smith { /* adjust size and location */
+    
+}
+/* use in-line CSS to make lists horizontal */
+
+/* add links to footer - same as header */
+
+/* for index4 - customize form at bottom along with button. */
+.logo{ /* changed the size and location of the logo in the footer. */
+    padding-top: 100px;
+    height: 70px;
+    width: 70px;   
+    position: relative;
+}
+
+p.foottile{
+    font-size: 20px;
+}
+
+footer { /* make list horizontal at bottom, organize headers and logo */
+
+}
