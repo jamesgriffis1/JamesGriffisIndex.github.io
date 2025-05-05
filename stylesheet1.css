@@ -1,19 +1,19 @@
-header { /* adjust header */
+/* ENTIRE WEBSITE */
 
+header { 
+    background-color: #a8a8a8;
 
 }
 
 body { 
     background: none; /* images were being moved as a background image so i put this in to prevent that issue. */
-
-     /* edit to exact color of wordpress */
-    /* from wordpress, find font-family, font-size - margins - text-align, color - */
-    /* adjust images, lists, margins, overall organization */
-
 }
 
+/* PAGE 1 */
+
 body.one{
-    background-color: lightgrey; /* changed the background color for my first page */
+    background-color: #ebebeb; /* changed the background color for my first page */
+    color: #111111;
 }
 
 .title{
@@ -47,8 +47,10 @@ div.about{ /* aligned the about page title and paragraph in the center, adjusted
     padding-top: 15px
 }
 
+/* PAGE 2 */
+
 body.two{
-    background-color:white; /* changed the background color on page 2 to match my Wordpress website. */
+    background-color: #ebebeb; /* changed the background color on page 2 to match my Wordpress website. */
 }
 
 div.meetplayers{ /* this altered the opening paragraph and title of the second page. */
@@ -109,31 +111,107 @@ ul.n{ /* allowed the sixth list to be in the bottom line aligned to the right, w
     font-size: 18px;
 }
 
+/* PAGE 3 */
 
-
-.sellers { /* adjust size and location */
-    
+body.three{ /* adjust colors of page three */
+    background-color: #ebebeb;
+    color: #111111;
 }
 
-.smith { /* adjust size and location */
-    
-}
-/* use in-line CSS to make lists horizontal */
-
-/* add links to footer - same as header */
-
-/* for index4 - customize form at bottom along with button. */
-.logo{ /* changed the size and location of the logo in the footer. */
-    padding-top: 100px;
-    height: 70px;
-    width: 70px;   
+div.pick{ /* adjusts the intro of the third page */
+    text-align: center;
+    width: 600px;
     position: relative;
+    left: 30%;
+    padding-top: 15px
 }
 
-p.foottile{
-    font-size: 20px;
+div.row{ /* This div allowed me to group the picture and blurb of my first pick */
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
 }
 
-footer { /* make list horizontal at bottom, organize headers and logo */
+.list{ /* This list controlled both of the lists around the images which created some space bettwen the pictures and increased the text size. */
+    margin: 10px;
+    font-size: larger;
+}
 
+.row.reverse{ /* row reverse allowed me to mirror the top row on to the second one. */
+    flex-direction: row-reverse;
+}
+
+
+.sellers { /* adjusted size and margin of the first image */
+    width: 700px;
+    height: auto;
+    margin: 10px;
+    border-radius: 15px;
+}
+
+.smith { /* adjusted size and margin of the second image */
+    width: 700px;
+    height: auto;
+    margin: 10px;
+    border-radius: 15px;
+}
+
+/* PAGE 4 */
+
+body.four{
+    background-color: #ebebeb;
+    color: #111111;
+}
+
+.form-container{
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 20px;
+}
+
+form{
+    flex: 1;
+    border: 1px solid #cccccc;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+
+
+
+/* FOOTER */
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    background-color: #a8a8a8;
+    padding: 40px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+.footer-column{
+    flex: 1 1 200px;
+    margin: 0 20px;
+}
+
+.footer-logo{
+    width: 50px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.footer-column h3, .footer-column h4{
+    margin-bottom: 10px;
+}
+
+.footer-column ul{
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li{
+    margin-bottom: 8px;
 }
