@@ -5,6 +5,7 @@
     <meta name="author" content="James Griffis">
     <meta name="description" content="Learn about the website and the information it contains.">
     <meta name="keywords" content="Heisman, College Football, Elites, 2025, Players">
+    <link rel="stylesheet" href="stylesheet1.css">
     <title>Road to the 2025 Heisman: Leading Characters and Profiles</title>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-F1ZZN9HME7"></script>
@@ -16,50 +17,58 @@
   gtag('config', 'G-F1ZZN9HME7');
 </script>
 </head>
-<body>
+<body class="one">
     <header>
-        <h1><img src="logo.jpg" alt="logo">Road to the 2025 Heisman: Leading Characters and Profiles</h1>
+        <h1 class="title"><img src="logo.png" alt="logo" class="logotop">Road to the 2025 Heisman: Leading Characters and Profiles</h1>
         <nav>    
-            <ul>
-                <a href="./index.html"><li>About</li></a>
-                <a href="./index2.html"><li>The Players</li></a>
-                <a href="./index3.html"><li>Picks</li></a>
-                <a href="./index4.html"><li>Form</li></a>
-                <!-- Use CSS to make this list horizontal -->
+            <ul class="nav">
+                <a href="./index.html"><li class="nav1">About</li></a>
+                <a href="./index2.html"><li class="nav1">The Players</li></a>
+                <a href="./index3.html"><li class="nav1">Picks</li></a>
+                <a href="./index4.html"><li class="nav1">Form</li></a>
             </ul>
         </nav>
     </header>
     <div class="container">
-        <div id="page1" class="page">
+        <div id="page1" class="about">
             <h1>About Us</h1>
             <p>Elites of College Football is a website designed to analyze the best players of the upcoming college football season. Throughout the page you will find the six of the premier players, along with important data points, our two favorite picks for the Heisman Trophy, and a form where you are able to submit your favorite players to be added to the Elites of College Football.</p>
-            <img src="2025.jpg" alt="2025">
+            <img src="2025.jpg" alt="2025" class="year">
         </div>
     </div>
-    <footer>
-        <img src="logo.jpg" alt="logo">
-        <p>Road to the 2025 Heisman: Leading Candidates and Profiles</p>
-        <p><i>2025 Top College Football Players</i></p> <!-- smaller text -->
-        <!-- align this to the left side of footer -->
-        <ul style="list-style-type:none;"> <!-- Make list horizontal --> <!-- sublists our vertical -->
-            <li>About</li>
-                <ul style="list-style-type:none;">
-                    <li>About Us</li>
+    
+    <footer class="footer">
+        <div class="footer-column">
+            <img src="logo.png" alt="Logo" class="footer-logo">
+            <h3>Road to the 2025 Heisman: Leading Candidates and Profiles<h3>
+            <p><i>2025 Top College Football Players</i></p> 
+        </div>
+    
+        <div class="footer-column">
+            <h4>About</h4>
+            <ul>
+                <li><a href="./index.html">About Us</a></li>
+            </ul>
+        </div>
+    
+        <div class="footer-column">
+            <h4>Players</h4>
+            <ul>
+                <li><a href="./index2.html">Meet the Players</a></li>
+                <li><a href="./index3.html">Our Picks</a></li>
+            </ul>
+        </div>
+    
+        <div class="footer-column">
+            <h4>Contact Us</h4>
+                <ul>
+                    <li><a href="./index4.html">Forms</a></li>
+                    <li><a href="https://twitter.com">Twitter</a></li>
+                    <li><a href="https://instagram.com">Instagram</a></li>
                 </ul>
-            <li>Players</li>
-                <ul style="list-style-type:none;">
-                    <li>Meet the Players</li>
-                    <li>Our Picks</li>
-                </ul>
-            <li>Contact Us</li>
-                <ul style="list-style-type:none;">
-                    <li>Phone Number</li>
-                    <li>Email</li>
-                    <li>Twitter</li>
-                </ul>
-        </ul>
-    </footer>
-
+                
+        </div>
+        </footer>
 
 </body>
 </html>
