@@ -5,6 +5,7 @@
     <meta name="author" content="James Griffis">
     <meta name="description" content="Submit your favorite for the Heisman Trophy.">
     <meta name="keywords" content="Heisman Trophy, College Football, Pick, 2025, Submit, Form">
+    <link rel="stylesheet" href="stylesheet1.css">
     <title>Submit Your Pick</title>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-F1ZZN9HME7"></script>
@@ -15,53 +16,137 @@
 
   gtag('config', 'G-F1ZZN9HME7');
 </script>
+<script> // Form Validation for First Form //
+    document.addEventListener("DomContentLoaded", function() {
+        const form = document.getElementById("form1");
+        const FirstName=document.getElementById("fname");
+        const LastName=document.getElementById("lname");
+        const EmailAddress=document.getElementById("email");
+        const Pick=document.getElementById("userPick");
+
+        form.addEventListener("submit", function(event) {
+        const errors = [];
+
+        if (FirstName.value.length < 1) {
+            errors.push("Please Enter your First Name.");
+        }
+
+        if (LastName.value.length < 1) {
+            errors.push("Please Enter your Last Name");
+        }
+
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(EmailAddress.value)) {
+            errors.push("Pleause Enter a Valid Email Address.");
+        }
+
+        if (Pick.value.length < 1) {
+            errors.push("Please Enter a Valid Player Name");
+        }
+
+        if (errors.length > 0) {
+            event.preventdefault();
+            alert(errors.join("/n"));
+        }
+    });
+    });
+</script>
+<script> // Form Validation for the Radio Form //
+    function validateForm() {
+        var radios = document.getElementsByName("fav_player");
+        var formValid = false;
+
+        var i = 0;
+        while (!formValid && i < radios.length){
+            if (radios[i].checked) formValid = true;
+            i++;
+        }
+        if (!formValid) alert("Must Select an Option!");
+        return formValid;
+    }
+
+</script>
 </head>
-<body>
+<body class="four">
     <header>
-        <h1><img src="logo.jpg" alt="logo">Road to the 2025 Heisman: Leading Characters and Profiles</h1>
+        <h1 class="title"><img src="logo.png" alt="logo" class="logotop">Road to the 2025 Heisman: Leading Characters and Profiles</h1>
         <nav>    
-            <ul>
-                <a href="./index.html"><li>About</li></a>
-                <a href="./index2.html"><li>The Players</li></a>
-                <a href="./index3.html"><li>Picks</li></a>
-                <a href="./index4.html"><li>Form</li></a>
-                <!-- Use CSS to make this list horizontal -->
+            <ul class="nav">
+                <a href="./index.html"><li class="nav1">About</li></a>
+                <a href="./index2.html"><li class="nav1">The Players</li></a>
+                <a href="./index3.html"><li class="nav1">Picks</li></a>
+                <a href="./index4.html"><li class="nav1">Form</li></a>
             </ul>
         </nav>
     </header>
-    <div class="container">
-        <div id="page4" class="page">
-            <h1>Who's Your Pick</h1>
-            <p>Click the button below for your pick to be featured.</p>
-            <form action="picks.php" method="get">
-                <label for="userPick">Enter Your Pick:</label>
-                <input type="text" id="userPick" name="userPick">
+
+    <div id="page4" class="page">
+        <div class="form-container">    
+            <form action="#" method="post" id="form1">
+                <h2>Submit Your Pick</h2>
+                <p>Click the button below for your pick to be featured.</p><br><br>
+                <label for="fname">First Name:</label>
+                <input type="text" id="fname" name="fname" required><br><br>
+                <label for="lname">Last Name:</label>
+                <input type="text" id="lname" name="lname" required><br><br>
+                <label for="email">Email Address:</label>
+                <input type="text" id="email" name="email" required><br><br>
+                <label for="userPick">Enter Your Pick Who You Want To See Featured:</label>
+                <input type="text" id="userPick" name="userPick" required><br><br><br>
                 <button type="submit">Submit</button>
-            </form>
+            </form> 
+                <form action="#" method="post" id="form2" onsubmit="return validateForm()">
+                    <h2>Who's Your Pick?</h2>
+                    <p>Select your Heisman Trophy winner from our picks.</p><br>
+                    <input type="radio" id="gnuss" name="fav_player" value="Garrett Nussmeier">
+                    <label for="gnuss">Garrett Nussmeier</label><br><br>
+                    <input type="radio" id="amann" name="fav_player" value="Arch Manning">
+                    <label for="amann">Arch Manning</label><br><br>
+                    <input type="radio" id="cklub" name="fav_player" value="Cade Klubnik">
+                    <label for="cklub">Cade Klubnik</label><br><br>
+                    <input type="radio" id="dmoor" name="fav_player" value="Dante Moore">
+                    <label for="dmoor">Dante Moore</label><br><br>
+                    <input type="radio" id="jsmit" name="fav_player" value="Jeremiah Smith">
+                    <label for="jsmit">Jeremiah Smith</label><br><br>
+                    <input type="radio" id="niama" name="fav_player" value="Nico Iamaleava">
+                    <label for="niama">Nico Iamaleava</label><br><br><br>
+                    <button type="submit">Submit</button>
+                </form>
+
+            </div>
         </div>
+
+    <footer class="footer">
+    <div class="footer-column">
+        <img src="logo.png" alt="Logo" class="footer-logo">
+        <h3>Road to the 2025 Heisman: Leading Candidates and Profiles<h3>
+        <p><i>2025 Top College Football Players</i></p> 
     </div>
-    <footer>
-        <img src="logo.jpg" alt="logo">
-        <p>Road to the 2025 Heisman: Leading Candidates and Profiles</p>
-        <p><i>2025 Top College Football Players</i></p> <!-- smaller text -->
-        <!-- align this to the left side of footer -->
-        <ul style="list-style-type:none;"> <!-- Make list horizontal --> <!-- sublists our vertical -->
-            <li>About</li>
-                <ul style="list-style-type:none;">
-                    <li>About Us</li>
-                </ul>
-            <li>Players</li>
-                <ul style="list-style-type:none;">
-                    <li>Meet the Players</li>
-                    <li>Our Picks</li>
-                </ul>
-            <li>Contact Us</li>
-                <ul style="list-style-type:none;">
-                    <li>Phone Number</li>
-                    <li>Email</li>
-                    <li>Twitter</li>
-                </ul>
+
+    <div class="footer-column">
+        <h4>About</h4>
+        <ul>
+            <li><a href="./index.html">About Us</a></li>
         </ul>
+    </div>
+
+    <div class="footer-column">
+        <h4>Players</h4>
+        <ul>
+            <li><a href="./index2.html">Meet the Players</a></li>
+            <li><a href="./index3.html">Our Picks</a></li>
+        </ul>
+    </div>
+
+    <div class="footer-column">
+        <h4>Contact Us</h4>
+            <ul>
+                <li><a href="./index4.html">Forms</a></li>
+                <li><a href="https://twitter.com">Twitter</a></li>
+                <li><a href="https://instagram.com">Instagram</a></li>
+            </ul>
+            
+    </div>
     </footer>
 
 
