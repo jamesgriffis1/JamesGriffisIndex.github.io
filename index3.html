@@ -5,6 +5,7 @@
     <meta name="author" content="James Griffis">
     <meta name="description" content="Find out who our picks are for the Heisman Trophy.">
     <meta name="keywords" content="Heisman Trophy, College Football, Picks, 2025, Sellers, Smith">
+    <link rel="stylesheet" href="stylesheet1.css">
     <title>Our Picks</title>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-F1ZZN9HME7"></script>
@@ -15,71 +16,160 @@
 
   gtag('config', 'G-F1ZZN9HME7');
 </script>
+<style>
+    * {box-sizing: border-box;}
+    .mySlides1, .mySlides2 {display: none;}
+    img {vertical-align: middle;}
+    /* slideshow container*/
+    .slideshow-container {
+        max-width: 1000px;
+        position: relative;
+        margin: auto;
+    }
+    /* Next and Previous Buttons */
+    .prev, .next{
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+    }
+    /* Position the Next Button to the Right */
+    .next{
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+    /* Hover Background*/
+    .prev:hover, .next:hover {
+        background-color: #f1f1f1;
+        color: black;
+    }
+</style>
 </head>
-<body>
+<body class="three">
     <header>
-        <h1><img src="logo.jpg" alt="logo">Road to the 2025 Heisman: Leading Characters and Profiles</h1>
+        <h1 class="title"><img src="logo.png" alt="logo" class="logotop">Road to the 2025 Heisman: Leading Characters and Profiles</h1>
         <nav>    
-            <ul>
-                <a href="./index.html"><li>About</li></a>
-                <a href="./index2.html"><li>The Players</li></a>
-                <a href="./index3.html"><li>Picks</li></a>
-                <a href="./index4.html"><li>Form</li></a>
-                <!-- Use CSS to make this list horizontal -->
+            <ul class="nav">
+                <a href="./index.html"><li class="nav1">About</li></a>
+                <a href="./index2.html"><li class="nav1">The Players</li></a>
+                <a href="./index3.html"><li class="nav1">Picks</li></a>
+                <a href="./index4.html"><li class="nav1">Form</li></a>
             </ul>
         </nav>
     </header>
+
     <div class="container">
         <div id="page3" class="page">
-            <h1>Our Picks</h1>
-            <p>Below you will find one dark horse and one favorite that the Elites of College Football love to take home the Heisman Trophy.</p>
-            <h2>LaNorris Sellers</h2>
-            <ul style="list-style-type:circle;">
-                <li>As a sophomore Sellers led a South Carolina team, picked to finish last in the SEC, to an amazing 9-4 almost making the playoffs.</li>
-                <li>2024 Season Stats</li>
-                    <ul>
-                        <li>2,274 passing yards and 17 passing touchdowns.</li>
-                        <li>655 rushing yards and 7 rushing touchdowns.</li>
+            <div class="pick">
+                <h1>Our Picks</h1>
+                <p>Below you will find one dark horse and one favorite that the Elites of College Football love to take home the Heisman Trophy.</p>
+            </div>
+            <div class="row">
+            <div class="slideshow-container">
+                <div class="mySlides1"><img src="sellers.jpg" alt="LaNorris Sellers" class="sellers"></div>
+                <div class="mySlides1"><img src="freshman.jfif" alt="Freshman of the Year" class="sellers"></div>
+                <div class="mySlides1"><img src="usc.jfif" alt="LaNorris Sellers in Action" class="sellers"></div>
+                <a class="prev" onclick="plusSlides(-1,0)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1,0)">&#10095;</a>
+            </div>
+                    <ul style="list-style-type:circle;" class="list">
+                        <h2>LaNorris Sellers</h2> 
+                        <li class="sell">As a sophomore Sellers led a South Carolina team, picked to finish last in the SEC, to an amazing 9-4 almost making the playoffs.</li>
+                        <li class="sell">2024 Season Stats</li>
+                            <ul>
+                                <li class="sell">2,274 passing yards and 17 passing touchdowns.</li>
+                                <li class="sell">655 rushing yards and 7 rushing touchdowns.</li>
+                            </ul>
+                        <li>The dual-threat quarterback, nicknamed “Superman”, is definitely a dark horse for the Heisman Trophy.</li>
                     </ul>
-                <li>The dual-threat quarterback, nicknamed “Superman”, is definitely a dark horse for the Heisman Trophy.</li>
+            </div>
+            <div class="row reverse">
+            <div class="slideshow-container">
+                <div class="mySlides2"><img src="smith.jpg" alt="Jeremiah Smith" class="smith"></div>
+                <div class="mySlides2"><img src="jj.jfif" alt="National Champion" class="smith"></div>
+                <div class="mySlides2"><img src="jsmit.jfif" alt="One Handed Catch" class="smith"></div>
+                <a class="prev" onclick="plusSlides(-1,1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1,1)">&#10095;</a>
+            </div>
+                <ul class="list">
+                    <h2>Jeremiah Smith</h2>
+                    <li>He was a True Freshman last season and lived up to the hype surrounding his name.</li>
+                    <li>Big Ten Freshman of the Year</li>
+                    <li>Wide Receiver of the Year</li>
+                    <li>National Champion</li>
+                    <li>Only dropped two passes last season.</li>
             </ul>
-            <img src="sellers.jpg" alt="LaNorris Sellers">
-            <!-- Align Image to the right of list-->
-            <h2>Jeremiah Smith</h2>
-            <ul>
-                <li>He was a True Freshman last season and lived up to the hype surrounding his name.</li>
-                <li>Big Ten Freshman of the Year</li>
-                <li>Wide Receiver of the Year</li>
-                <li>National Champion</li>
-                <li>Only dropped two passes last season.</li>
-            </ul>
-            <img src="smith.jpg" alt="Jeremiah Smith">
             <!-- align image to the left with list on the right. Should be the opposite of the one above. -->
+            </div>
         </div>
     </div>
-    <footer>
-        <img src="logo.jpg" alt="logo">
-        <p>Road to the 2025 Heisman: Leading Candidates and Profiles</p>
-        <p><i>2025 Top College Football Players</i></p> <!-- smaller text -->
-        <!-- align this to the left side of footer -->
-        <ul style="list-style-type:none;"> <!-- Make list horizontal --> <!-- sublists our vertical -->
-            <li>About</li>
-                <ul style="list-style-type:none;">
-                    <li>About Us</li>
+
+    <!-- Slideshow Script -->
+     <script>
+        let slideIndex = [1,1];
+        let slideId = ["mySlides1", "mySlides2"]
+        showSlides (1,0);
+        showSlides (1,1);
+
+        function plusSlides(n, no){
+            showSlides(slideIndex[no] += n, no);
+        }
+        function showSlides(n, no){
+            let i;
+            let x = document.getElementsByClassName(slideId[no]);
+            if (n > x.length) {slideIndex[no] = 1}
+            if (n < 1) {slideIndex[no] = x.length}
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex[no]-1].style.display = "block"
+        }
+     </script>
+
+
+
+
+
+    <footer class="footer">
+        <div class="footer-column">
+            <img src="logo.png" alt="Logo" class="footer-logo">
+            <h3>Road to the 2025 Heisman: Leading Candidates and Profiles<h3>
+            <p><i>2025 Top College Football Players</i></p> 
+        </div>
+    
+        <div class="footer-column">
+            <h4>About</h4>
+            <ul>
+                <li><a href="./index.html">About Us</a></li>
+            </ul>
+        </div>
+    
+        <div class="footer-column">
+            <h4>Players</h4>
+            <ul>
+                <li><a href="./index2.html">Meet the Players</a></li>
+                <li><a href="./index3.html">Our Picks</a></li>
+            </ul>
+        </div>
+    
+        <div class="footer-column">
+            <h4>Contact Us</h4>
+                <ul>
+                    <li><a href="./index4.html">Forms</a></li>
+                    <li><a href="https://twitter.com">Twitter</a></li>
+                    <li><a href="https://instagram.com">Instagram</a></li>
                 </ul>
-            <li>Players</li>
-                <ul style="list-style-type:none;">
-                    <li>Meet the Players</li>
-                    <li>Our Picks</li>
-                </ul>
-            <li>Contact Us</li>
-                <ul style="list-style-type:none;">
-                    <li>Phone Number</li>
-                    <li>Email</li>
-                    <li>Twitter</li>
-                </ul>
-        </ul>
-    </footer>
+                
+        </div>
+        </footer>
 
 
 </body>
